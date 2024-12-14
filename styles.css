@@ -1,94 +1,344 @@
-/* Reset some default styles */
 * {
+    padding: 0%;
+    margin: 0%;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    cursor: none;
+    user-select: none;
+}
+
+:root {
+    --primary-color: #101212e6;
+    --secondary-color: #e5f4e3;
+    --neutral-color: #ecf0f1;
+}
+
+@keyframes fade {
+    0%, 2% {
+      z-index: -100;
+    }
+    2.01%, 100% {
+      z-index: 100;
+    }
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
+    font-family: 'Rubik', sans-serif;
+    background-color: #F2F1EB;
+    box-sizing: border-box;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+.header {
+    display: flex;
+    flex-direction: column; /*Stack children vertically */
+    align-items: center; /*Center children horizontally */
+    /* background-color: #101212e6; */
+    /* background-color: #e5e5f7; */
+    opacity: 0.9;
+    background-image:  linear-gradient(#4f444440 1px, transparent 1px), linear-gradient(to right, #4f444440 1px, black 1px);
+    background-size: 40px 40px;
+    color: #ff7f11;
+    padding: 20px 0;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+
+.header h1 {
+    margin: 0;
+    padding-top: 20px;
 }
 
-nav ul li {
-    display: inline;
+.circle {
+    width: 300px; /* Set the width of the circle */
+    height: 300px; /* Set the height of the circle */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Hide overflow */
+    margin: auto; /* Center the circle */
+    position: relative; /* Position relative for absolute children */
+    background: linear-gradient(180deg,#00dbde 0%, #fc00ff 100%); /* Maintain gradient */
+    clip-path: circle(420px at center);
+    display: flex;
+}
+
+.circle img {
+    width: 100%; /* Make the image fill the circle */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position absolute to fill the circle */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #e8e8e8;
+    text-decoration: none;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+nav a:hover {
+    color: #b1ddf1;
 }
 
-/* Sections */
 section {
-    padding: 60px 20px;
-    min-height: 100vh;
+    padding: 5px;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.897);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 99vh;
+    scroll-snap-align: start;
 }
 
-/* Specific section styles */
-#about {
-    background: #f4f4f4;
+
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    height: 100vh;
 }
 
-#projects {
-    background: #e2e2e2;
+.container::-webkit-scrollbar {
+    display: none;
 }
 
-#contact {
-    background: #ccc;
+h2 {
+    color: #ff7f11;
+    display: flex;
+    justify-content: center;
+    /* background-color: #00dbde; */
 }
 
-/* Footer */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project div {
+    flex: 1 1 10%;
+    margin: 10px;
+    background: rgba(153, 153, 153, 0.2);
+    color: #e8e8e8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #333;
-    color: #fff;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Responsive Styles */
+.tracker {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 29px;
+    border-radius: 50%;
+    border: solid white;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.tracker:after {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    content: "";
+    border: 30px solid blueviolet;
+    border-radius: 50%;
+    opacity: .4;
+}
+
+.tracker.hovered:after {
+    border: 30px solid #FF6000;
+    opacity: .4;
+}
+
+p {
+    display: contents;
+    color: #C9D6DF;
+}
+
+li{
+    color: #C9D6DF;
+    /* list-style-type: ; */
+}
+
+b{
+    color: aquamarine;
+}
+
+/* Button styles */
+
+/* Responsive styles for buttons */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+ 
+     
+} 
 
-    section {
-        padding: 40px 10px;
-    }
+/* New div styles */
 
-    header {
-        padding: 20px 0;
-    }
-
-    footer {
-        padding: 10px 0;
-    }
+button{
+    margin: 10px 0;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    padding-top: 5px;
+    border: none;
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+    opacity: .5;
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
+button:hover{
+    transform: scale(1.1) translateY(-2px);
+    opacity: 1;
 
-    nav ul li {
-        margin: 5px 0;
-    }
+}
 
-    section {
-        padding: 30px 5px;
-    }
+.skills{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.skills div{
+        padding: 10px 30px;
+        margin: .5rem .5rem;
+        font-size: 1rem;
+        background: rgba(153, 153, 153, 0.2);
+        border-radius: 5px;
+        font-weight: 600;
+        color: #ccc;
+}
+
+/* Form styles */
+form {
+    display: none;
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 80vh;
+    height: 80vh;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(13px) saturate(200%);
+    -webkit-backdrop-filter: blur(13px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.52);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 5px 5px 5px black;
+}
+
+@media (max-width: 590px) {
+ .form{
+    width: 80%;
+ }
+     
+} 
+
+
+
+form input, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin: 10px 0; /* Margin for spacing */
+    /* border: 1px solid #ccc;  */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+
+}
+
+textarea{
+    height: 240px;
+    resize: none;
+    background-color: #Cccc ;
+    color: black;
+}
+
+span{
+    color: red;
+}
+
+form div{
+    display: flex;
+    justify-content: space-between;
+}
+form button {
+    background-color: #FF6000; /* Green background */
+    width: 80px;
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 2px 5px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    cursor: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+form button:hover {
+    background-color: #FF6000; /* Darker green on hover */
+}
+
+.download{
+    display: none;
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    z-index: 999;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(13px) saturate(200%);
+    -webkit-backdrop-filter: blur(13px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.52);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 5px 5px 5px black;
+}
+
+.download button{
+    background-color: #FF6000; /* Green background */
+    width: 80px;
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 2px 5px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    cursor: none;
+}
+
+.download div{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
