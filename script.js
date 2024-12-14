@@ -67,7 +67,7 @@ ok.addEventListener('click',()=>{
     link.download = 'Mohamed_Gani_Resume.docx'; 
     link.click();
 });
+
     
     });
-    
     
