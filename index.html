@@ -45,8 +45,6 @@
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
         </nav>
                 
         <div class="circle">
@@ -56,8 +54,7 @@
         
         <div class="new-div">
             <div class="sidebar">
-                <button class="button-1" type="button" title="Download Resume" onclick="download()"><i class="material-icons">download</i></button>
-                <!-- <button class="button" type="button" title="Change Mode"><i class="material-icons">light_mode</i></button> -->
+                <button class="button-1" type="button" title="Download Resume" id="download-button"><i class="material-icons">download</i></button>
                 <button class="button-2" type="button" title="Feedback"><i class="material-icons">feedback</i></button>
             </div>
         </div>
@@ -67,12 +64,12 @@
         
     </section>
 
-    <section class="container" id="hello" >
+    <section class="container" >
 
         <div id="about">
             <h2>About Me</h2>
             <p>
-               Welcome to my portfolio! I’m a tech enthusiast with over a year of hands-on experience in network administration. From configuring network devices to ensuring backups run like clockwork, I’m passionate about keeping systems efficient and secure.
+               Welcome to my portfolio! I’m a tech enthusiast with over a year of hands-on experience in network administration at <span> Wipro Technologies</span>. From configuring network devices to ensuring backups run like clockwork, I’m passionate about keeping systems efficient and secure.
                 <br>         
                 When I’m not solving network puzzles, you’ll find me doing calisthenics or working on something like this webpage. This site is a personal project born out of interest, allowing me to document and share what I’ve learned in my spare time. Let’s just say I’m all about keeping things running smoothly—both in life and in networks!</p>
         </div>
@@ -96,7 +93,7 @@
         </div>
         <br>
         <h2>Skills</h2>
-        <div class="skills">
+        <div class="skills" id="skills">
            <div>Networking</div>
            <div>AWS</div>
            <div>Linux</div>
@@ -108,16 +105,10 @@
            <div>C</div>
         </div>
         <br>
-        <div id="experience">
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>Network Data Admin</strong> at <B> WIPRO Technologies </B> (Jan 2023 - Present)</li>
-            </ul>
-        </div>
         <br>
-        <div id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: mohamedgani.s28@outlook.com</p>
+        <div class="contact">
+            <!-- <h2>Contact Me</h2> -->
+            <p>To know more about me download my resume </p>
         </div>
     </section>
     <!-- <footer>
