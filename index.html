@@ -3,47 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style_v2.css">
+    <script src="cursor_v2.js"></script>
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="/path/to/material-symbols/index.css" rel="stylesheet"> -->
 </head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
+<body oncontextmenu="return false">
+    <div class="tracker">
+        &nbsp;
+    </div>
+<div class="container">
+    <h2>Contact Me</h2>
+    <form class="form"  action="https://formspree.io/f/mqakorpr"
+    method="POST">
+        <!-- <label for="name">Name:</label> -->
+        <input type="text" placeholder="Your Name*" name="name" required>
+        
+        <!-- <label for="email">Email:</label> -->
+        <input type="email" placeholder="Your Email*" name="email" required>
+        
+        <label for="message">Message<span>*</span></label>
+        <textarea name="message" required></textarea>
+        <div>
+            <button class="cancel">Cancel</button>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+
+    <div class="download">
+        <h3>Do you want to download my resume?</h3>
+        <div>
+            <button class="cancel2">Cancel</button>
+            <button class="ok" download>OK</button>
+        </div>
+    </div>
+
+    <section class="header">
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am a web developer with a passion for creating beautiful and functional websites.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
+                
+        <div class="circle">
+            <img src="me1.png" alt="Profile Picture" height="300px" > 
+            <img src="me.png" alt="Profile Picture" height="290px" style="animation: fade 3.5s infinite;">
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
+        
+        <div class="new-div">
+            <div class="sidebar">
+                <button class="button-1" type="button" title="Download Resume" onclick="download()"><i class="material-icons">download</i></button>
+                <!-- <button class="button" type="button" title="Change Mode"><i class="material-icons">light_mode</i></button> -->
+                <button class="button-2" type="button" title="Feedback"><i class="material-icons">feedback</i></button>
+            </div>
+        </div>
+
+        <h1>Hi, I am <span style="color: #dddbcb;"> Mohamed Gani </span> </h1>
+       
+        
+    </section>
+
+    <section class="container" id="hello" >
+
+        <div id="about">
+            <h2>About Me</h2>
+            <p>
+               Welcome to my portfolio! I’m a tech enthusiast with over a year of hands-on experience in network administration. From configuring network devices to ensuring backups run like clockwork, I’m passionate about keeping systems efficient and secure.
+                <br>         
+                When I’m not solving network puzzles, you’ll find me doing calisthenics or working on something like this webpage. This site is a personal project born out of interest, allowing me to document and share what I’ve learned in my spare time. Let’s just say I’m all about keeping things running smoothly—both in life and in networks!</p>
+        </div>
+        <br>
+        <div id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <div>
+                    <h3>College project </h3> <h6>(Jan 2022)</h6> <br>
+                    <p>Hosting a Webpage on a Linux Machine (Ubuntu) Using Apache2 This project involves setting up a basic web server on a Linux machine running Ubuntu using the Apache2 web server. The goal is to host a functional webpage and its accessable to devices within the local network for privacy and security. The project includes installing Apache2, configuring the web server, placing webpage files in the appropriate directory, adjusting permissions of firewall, implementing local network restrictions via configuration files, and testing access. It highlights foundational skills in web hosting, server management, and network security.</p>
+                </div>
+                <!-- <div>
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                </div>
+                <div>
+                    <h3>Project 3</h3>
+                    <p>Description of project 3.</p>
+                </div> -->
+            </div>
+        </div>
+        <br>
+        <h2>Skills</h2>
+        <div class="skills">
+           <div>Networking</div>
+           <div>AWS</div>
+           <div>Linux</div>
+           <div>Routing & Switching</div>
+           <div>HTML</div>
+           <div>CSS</div>
+           <div>JavaScript</div>
+           <div>Java</div>
+           <div>C</div>
+        </div>
+        <br>
+        <div id="experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Network Data Admin</strong> at <B> WIPRO Technologies </B> (Jan 2023 - Present)</li>
+            </ul>
+        </div>
+        <br>
+        <div id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: mohamedgani.s28@outlook.com</p>
         </div>
     </section>
+    <!-- <footer>
+        <p>&copy; 2024 Portfolio by <I style="color:aquamarine" > Mohamed Gani</I> </p>
+    </footer>    -->
+</div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: myemail@example.com</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 My Portfolio</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>
