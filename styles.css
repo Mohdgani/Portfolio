@@ -27,7 +27,7 @@
 body {
     line-height: 1.6;
     font-family: 'Rubik', sans-serif;
-    background-color: #F2F1EB;
+    background-color: black;
     box-sizing: border-box;
 }
 
@@ -38,7 +38,7 @@ body {
     /* background-color: #101212e6; */
     /* background-color: #e5e5f7; */
     opacity: 0.9;
-    background-image:  linear-gradient(#4f444440 1px, transparent 1px), linear-gradient(to right, #4f444440 1px, black 1px);
+    background-image:  linear-gradient(rgba(255, 255, 255, 0.19) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, .19) 1px, black 1px);
     background-size: 40px 40px;
     color: #FF6000;
     padding: 20px 0;
@@ -89,18 +89,20 @@ section {
     padding: 50px;
     margin: 5px;
     background: rgba(0, 0, 0, 0.897);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 99vh;
+    height: 100vh;
     scroll-snap-align: start;
+    top: 0;
+    left: 0;
 }
 
 
 
 .container {
-    scroll-snap-type: y mandatory;
-    overflow: scroll;
+    width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 .container::-webkit-scrollbar {
@@ -109,10 +111,8 @@ section {
 
 h2 {
     color: #FF6000;
-
     display: flex;
     justify-content: center;
-    /* background-color: #00dbde; */
 }
 
 h3{
@@ -176,8 +176,22 @@ p {
 /* Button styles */
 
 /* Responsive styles for buttons */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
  
+    .tracker{
+        display: none;
+        border: none;
+    }
+    .tracker::after{
+        display: none;
+    }
+
+    *{
+        cursor:auto;
+    }
+
+
+
      
 } 
 
@@ -185,8 +199,8 @@ p {
 
 button{
     margin: 10px 0;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 20px;
     border-radius: 50%;
     background-color: #ccc;
