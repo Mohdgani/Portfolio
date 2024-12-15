@@ -38,14 +38,20 @@ var feedback = document.querySelector(".form");
 var cancel = document.querySelector(".cancel");
 
 const toggleFeedback = () => {
-    if (download.style.display === 'block') {
+    if (feedback.style.display === 'block' || download.style.display === 'block') {
         return; // Do nothing if download is visible
     }
     feedback.style.display = feedback.style.display === 'block' ? 'none' : 'block';
+    button2.style.color = "#ff7f11";
 };
 
 button2.addEventListener('click', toggleFeedback);
-cancel.addEventListener('click', toggleFeedback);
+cancel.addEventListener('click', () => {
+    feedback.style.display = 'none';
+    button2.style.color = "black";
+    
+});
+
 
 var button1 = document.querySelector(".button-1");
 var download = document.querySelector(".download");
@@ -57,10 +63,15 @@ const toggledownload = () => {
         return; // Do nothing if feedback is visible
     }
     download.style.display = download.style.display === 'block' ? 'none' : 'block';
+    button1.style.color = "#ff7f11";
 };
 
 button1.addEventListener('click', toggledownload);
-cancel2.addEventListener('click', () => { download.style.display = 'none'});
+cancel2.addEventListener('click', () => { 
+    download.style.display = 'none'
+    button1.style.color = "black";
+});
+
 ok.addEventListener('click',()=>{
     const link = document.createElement('a'); 
     link.href = 'Mohamed_Gani_Resume.docx'; 
@@ -68,6 +79,9 @@ ok.addEventListener('click',()=>{
     link.click();
 });
 
-    
     });
+    
+
+    
+    
     
