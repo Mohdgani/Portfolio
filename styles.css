@@ -49,6 +49,7 @@ body {
 }
 
 .circle {
+    padding: 0;
     width: 330px; 
     height: 330px; 
     border-radius: 50%;
@@ -60,6 +61,7 @@ body {
 }
 
 .circle img {
+
     width: 100%; 
     height: auto; 
     position: absolute;
@@ -186,7 +188,10 @@ p {
 
 
 @media (max-width: 450px) {
- 
+    .circle{
+         width: 80vw;
+         height: 80vw;
+    }
     .tracker{
         display: none;
         border: none;
@@ -276,10 +281,12 @@ form {
     box-shadow: 5px 5px 5px black;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 390px) {
  .form{
     width: 80%;
  }
+
+
      
 } 
 
