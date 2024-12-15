@@ -176,7 +176,7 @@ p {
 /* Button styles */
 
 /* Responsive styles for buttons */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
  
     .tracker{
         display: none;
