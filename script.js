@@ -43,20 +43,22 @@ const toggleFeedback = () => {
     }
     feedback.style.display = feedback.style.display === 'block' ? 'none' : 'block';
     button2.style.color = "#ff7f11";
+    container.style.overflow = "hidden";
 };
 
 button2.addEventListener('click', toggleFeedback);
 cancel.addEventListener('click', () => {
     feedback.style.display = 'none';
     button2.style.color = "black";
-    
+    container.style.overflow = "auto";
 });
 
 
 var button1 = document.querySelector(".button-1");
 var download = document.querySelector(".download");
 var cancel2 = document.querySelector(".cancel2");
-var ok =document.querySelector(".ok");
+var ok = document.querySelector(".ok");
+var container = document.querySelector(".container");
 
 const toggledownload = () => {
     if (feedback.style.display === 'block' || download.style.display === 'block') {
@@ -64,12 +66,15 @@ const toggledownload = () => {
     }
     download.style.display = download.style.display === 'block' ? 'none' : 'block';
     button1.style.color = "#ff7f11";
+    container.style.overflow = "hidden";
+
 };
 
 button1.addEventListener('click', toggledownload);
 cancel2.addEventListener('click', () => { 
     download.style.display = 'none'
     button1.style.color = "black";
+    container.style.overflow = "auto"; 
 });
 
 ok.addEventListener('click',()=>{
@@ -80,8 +85,3 @@ ok.addEventListener('click',()=>{
 });
 
     });
-    
-
-    
-    
-    
