@@ -1,8 +1,8 @@
 * {
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Verdana', sans-serif;
     overflow: hidden;
     scroll-behavior: smooth;
     cursor: none;
@@ -11,36 +11,33 @@
 
 :root {
     --primary-color: #101212e6;
-    --secondary-color: #e5f4e3;
-    --neutral-color: #ecf0f1;
+    --secondary-color: #FF6000;
+    --neutral-color: #ff7f11;
 }
 
 @keyframes fade {
     0%, 2% {
-      z-index: -100;
+        z-index: -100;
     }
     2.01%, 100% {
-      z-index: 100;
+        z-index: 100;
     }
 }
 
 body {
     line-height: 1.6;
     font-family: 'Rubik', sans-serif;
-    background-color: black;
-    box-sizing: border-box;
+    background-color: var(--primary-color);
 }
-
-
 
 .header {
     display: flex;
     flex-direction: column; 
     align-items: center; 
     opacity: 0.9;
-    background-image:  linear-gradient(rgba(255, 255, 255, 0.19) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, .19) 1px, black 1px);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.19) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, .19) 1px, black 1px);
     background-size: 40px 40px;
-    color: #FF6000;
+    color: var(--secondary-color);
     padding: 20px 10%; 
     max-width: 1500px; 
 }
@@ -51,7 +48,6 @@ body {
 }
 
 .circle {
-    padding: 0;
     width: 330px; 
     height: 330px; 
     border-radius: 50%;
@@ -63,14 +59,12 @@ body {
 }
 
 .circle img {
-
     width: 100%; 
     height: auto; 
     position: absolute;
     top: 0; 
     left: 0; 
 }
-
 
 .navbar {
     background-color: #333;
@@ -79,11 +73,10 @@ body {
 
 .navbar ul {
     list-style-type: none;
-    margin: 0px;
+    margin: 0;
     padding: 0 30px;
     display: flex;
     justify-content: center;
-
 }
 
 .navbar li a {
@@ -106,34 +99,27 @@ section {
     background: rgba(0, 0, 0, 0.897);
     height: 100vh; 
     scroll-snap-align: start;
-    top: 0;
-    left: 0;
 }
-
-
 
 .container {
     width: 100vw;
     height: 100vh; 
     overflow-y: scroll;
-    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
-
 
 .container::-webkit-scrollbar {
     display: none;
 }
 
 h2 {
-    color: #FF6000;
+    color: var(--secondary-color);
     display: flex;
     justify-content: center;
 }
 
-h3{
-    color: #ff7f11;
-
+h3 {
+    color: var(--neutral-color);
 }
 
 .project {
@@ -150,8 +136,6 @@ h3{
     padding: 10px;
     border-radius: 5px;
 }
-
-
 
 .tracker {
     position: fixed;
@@ -177,7 +161,7 @@ h3{
 }
 
 .tracker.hovered:after {
-    border: 30px solid #FF6000;
+    border: 30px solid var(--secondary-color);
     opacity: .4;
 }
 
@@ -186,52 +170,37 @@ p {
     color: #C9D6DF;
 }
 
-
-
-
 @media (max-width: 500px) {
-    .circle{
-         width: 80vw;
-         height: 80vw;
+    .circle {
+        width: 80vw;
+        height: 80vw;
     }
-    .tracker{
+    .tracker {
         display: none;
         border: none;
     }
-    .tracker::after{
-        display: none;
-    }
-
-    *{
-        cursor:auto;
-    }
-
-    section{
+    section {
         height: 100vh;
     }
-
-    .header h1{
+    .header h1 {
         padding-bottom: 100px;
     }     
-
-    .form{
+    .form {
         width: 80vw;
         height: 58vh;
     }
-    .container .download{
+    .container .download {
         width: 60vw;
         height: 25vh;
     }
-
 } 
 
-.button{
+.button {
     display: flex;
     justify-content: end;
 }
 
-
-button{
+button {
     width: 50px;
     height: 50px;
     margin: 20px;
@@ -243,32 +212,31 @@ button{
     opacity: .5;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.1) translateY(-2px);
     opacity: 1;
-    color: #ff7f11;
+    color: var(--neutral-color);
 }
 
-.skills{
+.skills {
     display: flex;
     justify-content: center;
-  flex-wrap: wrap;
-  padding-top: 10px;
+    flex-wrap: wrap;
+    padding-top: 10px;
 }
 
-.skills div{
-        padding: 10px 30px;
-        margin: .5rem .5rem;
-        font-size: 1rem;
-        background: rgba(153, 153, 153, 0.2);
-        border-radius: 5px;
-        font-weight: 600;
-        color: #ccc;
+.skills div {
+    padding: 10px 30px;
+    margin: .5rem .5rem;
+    font-size: 1rem;
+    background: rgba(153, 153, 153, 0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #ccc;
 }
 
-.skills div:hover{
-    color: #ff7f11;
-
+.skills div:hover {
+    color: var(--neutral-color);
 }
 
 /* Form styles */
@@ -285,7 +253,6 @@ form {
     left: 50%;
     transform: translate(-50%, -50%);
     backdrop-filter: blur(13px) saturate(200%);
-    -webkit-backdrop-filter: blur(13px) saturate(200%);
     background-color: rgba(255, 255, 255, 0.52);
     border-radius: 12px;
     border: 1px solid rgba(209, 213, 219, 0.3);
@@ -294,15 +261,10 @@ form {
 }
 
 @media (max-width: 390px) {
- .form{
-    width: 80%;
- }
-
-
-     
+    .form {
+        width: 80%;
+    }
 } 
-
-
 
 form input, textarea {
     width: 100%; 
@@ -310,48 +272,47 @@ form input, textarea {
     margin: 10px 0; 
     border: none;
     border-radius: 5px; 
-
 }
 
-textarea{
+textarea {
     height: 240px;
     resize: none;
     background-color: #Cccc ;
     color: black;
 }
 
-span{
+span {
     color: red;
 }
 
-p span{
-    color: #ff7f11;
+p span {
+    color: var(--neutral-color);
 }
 
-form div{
+form div {
     display: flex;
     justify-content: space-between;
 }
+
 form button {
-    background-color: #FF6000; 
+    background-color: var(--secondary-color); 
     width: 80px;
     color: white; 
     border: none; 
     padding: 2px 5px;
     border-radius: 5px; 
     cursor: pointer; 
-    cursor: none;
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:focus {
     outline: none;
 }
 
 form button:hover {
-    background-color: #FF6000; 
+    background-color: var(--secondary-color); 
 }
 
-.download{
+.download {
     display: none;
     width: 50vw;
     height: 30vh;
@@ -364,7 +325,6 @@ form button:hover {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(13px) saturate(200%);
-    -webkit-backdrop-filter: blur(13px) saturate(200%);
     background-color: rgba(255, 255, 255, 0.52);
     border-radius: 12px;
     border: 1px solid rgba(209, 213, 219, 0.3);
@@ -372,27 +332,25 @@ form button:hover {
     box-shadow: 5px 5px 5px black;
 }
 
-.download button{
-    background-color: #FF6000; 
+.download button {
+    background-color: var(--secondary-color); 
     width: 80px;
     color: white; 
     border: none; 
     padding: 2px 5px;
     border-radius: 5px; 
     cursor: pointer; 
-    cursor: none;
 }
 
-.download div{
+.download div {
     padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact p{
+.contact p {
     display: flex;
     justify-content: center;
     font-size: 16px;
 }
-
