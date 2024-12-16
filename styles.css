@@ -179,6 +179,9 @@ p {
         display: none;
         border: none;
     }
+    .tracker::after{
+        display: none;
+    }
     section {
         height: 100vh;
     }
@@ -186,12 +189,12 @@ p {
         padding-bottom: 100px;
     }     
     .form {
-        width: 80vw;
-        height: 58vh;
+        width: 85vw;
+        height: 150dvw;
     }
     .container .download {
-        width: 60vw;
-        height: 25vh;
+        width: 80%;
+        height: 35%;
     }
 } 
 
