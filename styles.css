@@ -304,7 +304,6 @@ form button {
     border: none; 
     padding: 2px 5px;
     border-radius: 5px; 
-    cursor: pointer; 
 }
 
 textarea:focus, input:focus {
@@ -341,8 +340,7 @@ form button:hover {
     color: white; 
     border: none; 
     padding: 2px 5px;
-    border-radius: 5px; 
-    cursor: pointer; 
+    border-radius: 5px;
 }
 
 .download div {
