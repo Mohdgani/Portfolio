@@ -4,112 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="me.webp">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <link
-    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <!-- <link href="/path/to/material-symbols/index.css" rel="stylesheet"> -->
+    <script src="script.js" defer></script>
 </head>
 <body oncontextmenu="return false">
-    <div class="tracker">
-        &nbsp;
-    </div>
-<div class="container">
-    <form class="form"  action="https://formspree.io/f/mqakorpr"
-    method="POST">
-        <input type="text" placeholder="Your Name*" name="name" required>
-        <input type="email" placeholder="Your Email*" name="email" required>        
-        <label for="message">Message<span>*</span></label>
-        <textarea name="message" required></textarea>
-        <div>
-            <button class="cancel">Cancel</button>
-            <button type="submit">Send</button>
-        </div>
-    </form>
+    <div class="tracker">&nbsp;</div>
+    <div class="container">
+        <form class="form" action="https://formspree.io/f/mqakorpr" method="POST">
+            <input type="text" placeholder="Your Name*" name="name" required>
+            <input type="email" placeholder="Your Email*" name="email" required>
+            <label for="message">Message<span>*</span></label>
+            <textarea name="message" required></textarea>
+            <div>
+                <button class="cancel" type="button">Cancel</button>
+                <button type="submit">Send</button>
+            </div>
+        </form>
 
-    <div class="download">
-        <h3>Do you want to download my resume?</h3>
-        <div>
-            <button class="cancel2">Cancel</button>
-            <button class="ok" download>OK</button>
-        </div>
-    </div>
-
-    <section class="header">
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Project</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
-    </nav>  
-                
-        <div class="circle">
-            <img src="me1.webp" alt="Profile Picture" height="300px" > 
-            <img src="me.webp" alt="Profile Picture" height="290px" style="animation: fade 3.5s infinite;">
-        </div>
-
-        <h1>Hi, I am <span style="color: #dddbcb;"> Mohamed Gani </span> </h1>
-       
-    </section>
-
-    <section class="container" >
-
-        <div id="about">
-            <h2>About Me</h2>
-            <p>
-               Welcome to my portfolio! I’m a tech enthusiast with over a year of hands-on experience in network administration at <span> Wipro Technologies</span>. From configuring network devices to ensuring backups run like clockwork, I’m passionate about keeping systems efficient and secure.
-                <br>         
-                When I’m not solving network puzzles, you’ll find me doing calisthenics or working on something like this webpage. This site is a personal project born out of interest, allowing me to document and share what I’ve learned in my spare time. Let’s just say I’m all about keeping things running smoothly—both in life and in networks!</p>
-        </div>
-        <br>
-        <div id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <div>
-                    <h3>College project </h3> <h6>(Jan 2022)</h6> <br>
-                    <p>Hosting a Webpage on a Linux Machine (Ubuntu) Using Apache2 This project involves setting up a basic web server on a Linux machine running Ubuntu using the Apache2 web server. The goal is to host a functional webpage and its accessable to devices within the local network for privacy and security. The project includes installing Apache2, configuring the web server, placing webpage files in the appropriate directory, adjusting permissions of firewall, implementing local network restrictions via configuration files, and testing access. It highlights foundational skills in web hosting, server management, and network security.</p>
-                </div>
-                <!-- <div>
-                    <h3>Project 2</h3>
-                    <p>Description of project 2.</p>
-                </div>
-                <div>
-                    <h3>Project 3</h3>
-                    <p>Description of project 3.</p>
-                </div> -->
+        <div class="download">
+            <h3>Do you want to download my resume?</h3>
+            <div>
+                <button class="cancel2" type="button">Cancel</button>
+                <button class="ok" download>OK</button>
             </div>
         </div>
-        <br>
-        <h2>Skills</h2>
-        <div class="skills" id="skills">
-           <div>Networking</div>
-           <div>AWS</div>
-           <div>Linux</div>
-           <div>Routing & Switching</div>
-           <div>HTML</div>
-           <div>CSS</div>
-           <div>JavaScript</div>
-           <div>Java</div>
-           <div>C</div>
-        </div>
-        <br>
-        <div class="button">
-            <button class="button-1" type="button" title="Download Resume" id="download-button"><i class="material-icons">download</i></button>
-            <button class="button-2" type="button" title="Feedback"><i class="material-icons">feedback</i></button>
-        </div>
-        <br>
-        <div class="contact">
-            <p>&copy; 2024 Portfolio made by <b style="color:#ff7f11" >&nbsp;Mohamed Gani</b> </p>
-        </div>
-    </section>
-</div>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
+        <section class="header">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>  
+            <div class="circle">
+                <img src="me1.webp" alt="Profile Picture" height="300px"> 
+                <img src="me.webp" alt="Profile Picture with Animation" height="290px" style="animation: fade 3.5s infinite;">
+            </div>
+            <h1>Hi, I am <span style="color: #dddbcb;">Mohamed Gani</span></h1>
+        </section>
+
+        <section class="container">
+            <div id="about">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! I’m a tech enthusiast currently working at <span>Wipro Technologies</span> as an Oracle DBA, specializing in database administration and enterprise applications. From managing databases and optimizing application performance to ensuring seamless system operations, I thrive on solving complex technical challenges.
+
+                  <br><br>  Previously, I worked as a Network Engineer, maintaining network devices and ensuring reliable connectivity. Over time, my expertise evolved into database administration, where I focus on data integrity, performance tuning, and enterprise application workflows—helping systems run efficiently and securely.
+                    
+                <br><br> Beyond work, I enjoy exploring new technologies, refining my skills, and tackling personal projects—like this webpage! This portfolio serves as a space to document my journey and share insights I’ve gained along the way. Whether it’s networks, databases, or applications, I’m passionate about making systems run smoothly—both in technology and in life.</p>
+            </div>
+            <br>
+            <div id="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <div>
+                        <h3>College project</h3> <h6>(Jan 2022)</h6> <br>
+                        <p>Hosting a Webpage on a Linux Machine (Ubuntu) Using Apache2. This project involves setting up a basic web server on a Linux machine running Ubuntu using the Apache2 web server. The goal is to host a functional webpage accessible to devices within the local network for privacy and security. The project includes installing Apache2, configuring the web server, placing webpage files in the appropriate directory, adjusting permissions of the firewall, implementing local network restrictions via configuration files, and testing access. It highlights foundational skills in web hosting, server management, and network security.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h2>Skills</h2>
+            <div class="skills" id="skills">
+                <div>Database</div>
+                <div>PL/SQL</div>
+                <div>Oracle E-Business Suite</div>
+                <div>Weblogic</div>
+                <div>Networking</div>
+                <div>AWS</div>
+                <div>Linux</div>
+                <div>Routing & Switching</div>
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>Java</div>
+                <div>C</div>
+            </div>
+            <br>
+            <div class="button">
+                <!-- <div class="first">
+                    <button></button>
+                </div> -->
+                <div class="second">
+                <button class="button-1" type="button" title="Download Resume" id="download-button"><i class="material-icons">download</i></button>
+                <button class="button-2" type="button" title="Feedback"><i class="material-icons">feedback</i></button>
+                </div>
+            </div>
+            <br>
+            <div class="contact">
+                <p>&copy; 2024 Portfolio made by<b style="color:#ff7f11;">&nbsp;Mohamed Gani</b></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
