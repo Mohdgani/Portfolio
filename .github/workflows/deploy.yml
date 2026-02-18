@@ -21,7 +21,7 @@ jobs:
           docker rm portfolio
 
       - name: Sync files to S3
-        run: aws s3 sync ./site s3://mohd.com --delete
+        run: aws s3 sync ./site s3://mohd-portfolio-site-2026--delete
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
