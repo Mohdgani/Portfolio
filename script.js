@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Download resume on button click
     ok.addEventListener('click', () => {
         const link = document.createElement('a'); 
-        link.href = 'Mohamed_Gani_Resume.docx'; 
-        link.download = 'Mohamed_Gani_Resume.docx'; 
+        link.href = 'Mohamed_Gani_Apps_DBA.docx'; 
+        link.download = 'Mohamed_Gani_Apps_DBA.docx'; 
         link.click();
     });
 });
