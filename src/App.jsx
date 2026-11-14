@@ -167,7 +167,7 @@ function App() {
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
-          <a href="#projects">Project</a>
+          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
         </nav>
         <a className="header-contact" href="mailto:mohamedgani21@outlook.com">
@@ -345,7 +345,7 @@ function App() {
           MG<span>.</span>
         </a>
         <p>
-          Designed and built by Mohamed Gani with vibe coding ·{" "}
+          Built by Mohamed Gani ·{" "}
           {new Date().getFullYear()}
         </p>
         <a href="/Mohamed_Gani_Apps_DBA.docx" download>
