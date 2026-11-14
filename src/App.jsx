@@ -56,7 +56,7 @@ function HeroArtwork() {
     >
       <img
         className="hand-asset human-hand"
-        src="/human.png"
+        src={`${import.meta.env.BASE_URL}human.png`}
         alt=""
         aria-hidden="true"
         width="234"
@@ -64,7 +64,7 @@ function HeroArtwork() {
       />
       <img
         className="hand-asset robot-hand"
-        src="/robot.png"
+        src={`${import.meta.env.BASE_URL}robot.png`}
         alt=""
         aria-hidden="true"
         width="297"
@@ -348,7 +348,10 @@ function App() {
           Built by Mohamed Gani ·{" "}
           {new Date().getFullYear()}
         </p>
-        <a href="/Mohamed_Gani_Apps_DBA.docx" download>
+        <a
+          href={`${import.meta.env.BASE_URL}Mohamed_Gani_Apps_DBA.docx`}
+          download
+        >
           Download resume
         </a>
         <a href="mailto:mohamedgani21@outlook.com">mohamedgani21@outlook.com</a>
